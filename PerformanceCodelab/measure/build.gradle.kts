@@ -45,6 +45,7 @@ android {
         // a physical device. An emulator's simulated environment can significantly differ from
         // real-world hardware, potentially skewing your results.
         testInstrumentationRunnerArguments["androidx.benchmark.suppressErrors"] = "EMULATOR"
+        testInstrumentationRunnerArguments["androidx.benchmark.fullTracing.enable"] = "true"
         
         // Enables composition tracing from Macrobenchmarks.
         // It's helpful for analysing what takes the longest during composition,
@@ -76,6 +77,7 @@ dependencies {
     implementation(libs.espresso.core)
     implementation(libs.uiautomator)
     implementation(libs.benchmark.macro.junit4)
-
+    implementation("androidx.tracing:tracing-perfetto:1.0.0")
+    implementation("androidx.tracing:tracing-perfetto-binary:1.0.0")
     // TODO Codelab task: Add tracing-perfetto(-binary) dependencies to enable Composition Tracing
 }

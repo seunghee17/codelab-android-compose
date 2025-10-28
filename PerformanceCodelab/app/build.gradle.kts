@@ -89,6 +89,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.profileinstaller)
     implementation(libs.androidx.tracing.ktx)
+    implementation("androidx.compose.runtime:runtime-tracing")
 
     // TODO Codelab task: Add androidx.runtime-tracing dependency to enable Composition Tracing
 
